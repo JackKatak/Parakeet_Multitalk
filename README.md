@@ -1,8 +1,8 @@
 # Multitalker Parakeet ASR
 
-<img width="1074" height="861" alt="overlap" src="https://github.com/user-attachments/assets/e826e931-b08b-496e-a63c-e88df99487e9" />
-
 A multi-speaker speech recognition system using NVIDIA's Multitalker Parakeet Streaming model with speaker diarization.
+
+<img width="1074" height="861" alt="overlap" src="https://github.com/user-attachments/assets/e826e931-b08b-496e-a63c-e88df99487e9" />
 
 ## Features
 
