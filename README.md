@@ -9,6 +9,9 @@ A multi-speaker speech recognition system using NVIDIA's Multitalker Parakeet St
 - **Multi-speaker transcription**: Identifies and separates up to 4 speakers
 - **Speaker diarization**: Automatic speaker identification and labeling
 - **Word-level timestamps**: Precise timing for each word
+
+<img width="378" height="314" alt="time" src="https://github.com/user-attachments/assets/aa4429e2-0164-4958-aa48-7a53f3b40d6c" />
+
 - **Multiple output formats**:
   - Turn-based with overlap markers (best for conversations/debates)
   - Colored word-by-word interleaving
